@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!-- Developer: Owen Woods
+				 Contact: ojwoods@eagles.usi.edu
+				 Last Updated: 09/04/23 -->
+				 
+			<!-- This is to tell anyone viewing the source code what this page is for. -->
+			<title>Activity #3</title> 
+			<link rel="stylesheet" href="Business Form CSS.css">
+		</head>
+		<body>
+			<script src="Business Form Javascript.js"></script>
+			<!-- Inserts a logo picture. -->
+			<img src= "Movie Store Logo.png" alt="Movie Store Logo">
+		    <!-- This next code is to provide links to the other webpages of the website if it was a full fledge website. -->
+			<div class="topnav">
+				<nav>
+					<a href="#home">Home</a>
+					<a href="#movies_in_stock">Movies in Stock</a>
+					<a class="active" href="#report_issue">Report Issue</a>
+					<a href="#employee_roster">Employee Roster</a>
+					<a href="#about">About</a>
+				</nav>
+			</div>
+			<p> This form is to submit a message form as sort of an issue.
+				Please fill out all of the appropriate boxes.</p>
+			<form action="/my-handling-form-page" method="post" id="myForm">
+				<div>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="user_name" placeholder="Name"/>
+				</div>
+				<div>
+					<label for="date">Date of Issue:</label>
+					<input type="date" name "date" id="date" min="2022-12-31">
+				</div>
+				<div>
+					<label for="mail">Email:</label>
+					<input type="email" id="mail" name="user_email" placeholder="Email"/>
+				</div>
+				<div>
+					<h4> Gender: </h4>
+					<div>
+						<label for="male">Male</label>
+						<input type="radio" name "gender" id="male" required>
+					</div>
+					<div>
+						<label for="female">Female</label>
+						<input type="radio" name "gender" id="female" required>
+					</div>
+					<div>
+						<label for="other">Other</label>
+						<input type="radio" name "gender" id="other" required>
+					</div>
+				</div>
+				<div>
+					<h4> Type of Issue: </h4>
+					<div>
+						<input type="checkbox" id="issue1" name="issue1" value="EmpRoster">
+						<label for="issue1"> Employee Roster won't load</label>
+					</div>
+					<div>
+						<input type="checkbox" id="issue2" name="issue2" value="MovieStock">
+						<label for="issue2"> Movie Stock is Not Loading</label>
+					</div>
+					<div>
+						<input type="checkbox" id="issue3" name="issue3" value="Other">
+						<label for="vehicle3"> Other </label>
+					</div>
+				</div>
+				<div>
+					<label for="msg">Message:</label>
+					<textarea id="msg" name="user_message" placeholder="Please elaborate problem here..."></textarea>
+				</div>
+				
+				<div class="button">
+					<button type="button" onClick="myFunction()">Send your message</button>
+					<input type="button" onclick="myFunction()" value="Reset form">
+				</div>
+			</form>
+		</body>
+	</html>
